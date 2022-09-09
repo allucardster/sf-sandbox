@@ -26,7 +26,7 @@ Development Setup
 ```sh
 :~$ make composer-install
 ```
-- Init database (drop and create database. execute migrations )
+- Init database (drop, create database and schema.)
 ```sh
 :~$ make database-init
 ```

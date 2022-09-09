@@ -12,6 +12,6 @@ composer-install: ## make composer-install
 database-init: ## init database
 	docker-compose exec php sh -c './bin/console doctrine:database:drop --if-exists --force'
 	docker-compose exec php sh -c './bin/console doctrine:database:create'
-	docker-compose exec php sh -c './bin/console doctrine:migrations:migrate --no-interaction'
+	docker-compose exec php sh -c './bin/console doctrine:schema:create'
 database-migrations: ## execute database migrations
 	docker-compose exec php sh -c './bin/console doctrine:migrations:migrate --no-interaction'
